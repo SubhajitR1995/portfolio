@@ -27,6 +27,31 @@ export const about = {
   ],
 };
 
+export type ExperienceItem = {
+  role: string;
+  company: string;
+  period: string;
+  description: string;
+};
+
+// NOTE: Adjust the periods/roles below to match your actual history.
+export const experience: ExperienceItem[] = [
+  {
+    role: "Software Engineer — WordPress",
+    company: "Webskitters Technology Solutions Pvt. Ltd.",
+    period: "2023 — Present",
+    description:
+      "Develop and maintain custom WordPress themes, plugins, and full client websites. Focus on performance, responsive design, and clean, scalable code.",
+  },
+  {
+    role: "Web Developer",
+    company: "Webskitters Technology Solutions Pvt. Ltd.",
+    period: "2021 — 2023",
+    description:
+      "Built responsive websites and landing pages, implemented designs into pixel-perfect, cross-browser layouts, and collaborated with design and QA teams.",
+  },
+];
+
 export type Project = {
   title: string;
   description: string;

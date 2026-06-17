@@ -1,4 +1,4 @@
-import { profile } from "@/data/portfolio";
+import { profile, about } from "@/data/portfolio";
 
 const initials = profile.name
   .split(" ")
@@ -9,22 +9,26 @@ const initials = profile.name
 export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden">
-      {/* Decorative gradient glows */}
+      {/* Grid + gradient glows */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-40 left-1/2 h-[32rem] w-[32rem] -translate-x-1/2 rounded-full bg-brand-500/20 blur-3xl dark:bg-brand-500/25"
+        className="pointer-events-none absolute inset-0 bg-grid text-zinc-400 dark:text-white [mask-image:radial-gradient(ellipse_at_top,black,transparent_70%)]"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -right-32 top-20 h-80 w-80 rounded-full bg-brand-400/10 blur-3xl"
+        className="pointer-events-none absolute -top-48 left-1/2 h-[36rem] w-[36rem] -translate-x-1/2 rounded-full bg-brand-500/20 blur-[120px] dark:bg-brand-500/25"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute right-0 top-32 h-80 w-80 rounded-full bg-accent-500/10 blur-[100px]"
       />
 
-      <div className="relative mx-auto flex max-w-5xl flex-col items-start gap-7 px-6 py-28 sm:py-36">
-        <div className="flex items-center gap-4 animate-fade-up">
-          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-500 to-brand-700 text-lg font-bold text-white shadow-lg shadow-brand-500/25">
+      <div className="relative mx-auto flex max-w-6xl flex-col items-start gap-7 px-6 py-32 sm:py-40">
+        <div className="flex items-center gap-4">
+          <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-500 to-brand-700 text-xl font-bold text-white shadow-xl shadow-brand-500/30 ring-1 ring-white/10">
             {initials}
           </div>
-          <span className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white/60 px-3 py-1 text-xs font-medium text-zinc-600 backdrop-blur dark:border-zinc-800 dark:bg-zinc-900/60 dark:text-zinc-400">
+          <span className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white/60 px-3 py-1.5 text-xs font-medium text-zinc-600 backdrop-blur dark:border-white/10 dark:bg-white/5 dark:text-zinc-300">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
@@ -33,61 +37,47 @@ export default function Hero() {
           </span>
         </div>
 
-        <h1 className="animate-fade-up text-4xl font-bold leading-[1.1] tracking-tight sm:text-6xl">
-          Hi, I&apos;m {profile.name}.
+        <h1 className="max-w-3xl text-5xl font-bold leading-[1.05] tracking-tight sm:text-7xl">
+          <span className="text-zinc-900 dark:text-white">Hi, I&apos;m {profile.name}.</span>
           <br />
-          <span className="bg-gradient-to-r from-brand-500 to-brand-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-brand-400 via-brand-500 to-accent-400 bg-clip-text text-transparent">
             {profile.role}
           </span>
         </h1>
 
-        <p className="max-w-xl animate-fade-up text-lg leading-8 text-zinc-600 dark:text-zinc-400">
+        <p className="max-w-xl text-lg leading-8 text-zinc-600 dark:text-zinc-400">
           {profile.tagline}
         </p>
 
-        <div className="flex flex-wrap items-center gap-3 animate-fade-up">
+        <div className="flex flex-wrap items-center gap-3">
           <a
             href="#projects"
-            className="group inline-flex items-center gap-2 rounded-full bg-zinc-900 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-zinc-900/10 transition-all hover:bg-zinc-800 hover:shadow-xl dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-100"
+            className="group inline-flex items-center gap-2 rounded-full bg-zinc-900 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-zinc-900/20 transition-all hover:bg-zinc-800 hover:shadow-xl dark:bg-white dark:text-zinc-900 dark:shadow-white/10 dark:hover:bg-zinc-100"
           >
             View my work
             <span className="transition-transform group-hover:translate-x-0.5">→</span>
           </a>
           <a
             href="#contact"
-            className="rounded-full border border-zinc-300 px-6 py-3 text-sm font-medium transition-colors hover:border-zinc-400 hover:bg-zinc-100 dark:border-zinc-700 dark:hover:border-zinc-600 dark:hover:bg-zinc-900"
+            className="rounded-full border border-zinc-300 px-6 py-3 text-sm font-medium transition-colors hover:border-zinc-400 hover:bg-zinc-100 dark:border-white/15 dark:hover:border-white/30 dark:hover:bg-white/5"
           >
             Get in touch
           </a>
         </div>
 
-        <div className="mt-2 flex items-center gap-5 animate-fade-up text-sm text-zinc-500 dark:text-zinc-400">
-          <a
-            href={profile.socials.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors hover:text-brand-500"
-          >
-            GitHub
-          </a>
-          <span className="h-3 w-px bg-zinc-300 dark:bg-zinc-700" />
-          <a
-            href={profile.socials.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors hover:text-brand-500"
-          >
-            LinkedIn
-          </a>
-          <span className="h-3 w-px bg-zinc-300 dark:bg-zinc-700" />
-          <span className="inline-flex items-center gap-1.5">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z" strokeLinejoin="round" />
-              <circle cx="12" cy="10" r="2.5" />
-            </svg>
-            {profile.location}
-          </span>
-        </div>
+        {/* Stat strip */}
+        <dl className="mt-8 grid w-full max-w-2xl grid-cols-3 gap-4 border-t border-zinc-200 pt-8 dark:border-white/10">
+          {about.highlights.map((h) => (
+            <div key={h.label}>
+              <dt className="bg-gradient-to-r from-brand-400 to-accent-400 bg-clip-text text-2xl font-bold text-transparent sm:text-3xl">
+                {h.value}
+              </dt>
+              <dd className="mt-1 text-xs text-zinc-500 dark:text-zinc-400 sm:text-sm">
+                {h.label}
+              </dd>
+            </div>
+          ))}
+        </dl>
       </div>
     </section>
   );
