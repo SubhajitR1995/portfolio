@@ -10,7 +10,7 @@ export const profile = {
   phone: "+91 70034 20681",
   socials: {
     github: "https://github.com/SubhajitR1995",
-    linkedin: "https://linkedin.com/in/yourusername",
+    linkedin: "https://www.linkedin.com/in/subhajit-roy-2ab436bb/",
     twitter: "https://twitter.com/yourusername",
   },
 };
