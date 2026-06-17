@@ -14,23 +14,34 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-zinc-200/70 bg-white/80 backdrop-blur dark:border-zinc-800/70 dark:bg-zinc-950/80">
+    <header className="sticky top-0 z-50 border-b border-zinc-200/60 bg-white/70 backdrop-blur-md dark:border-zinc-800/60 dark:bg-zinc-950/70">
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <a href="#top" className="text-lg font-bold tracking-tight">
+        <a href="#top" className="group flex items-center gap-2 text-base font-bold tracking-tight">
+          <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 text-xs text-white">
+            {profile.name.split(" ").map((p) => p[0]).slice(0, 2).join("")}
+          </span>
           {profile.name}
         </a>
 
-        <ul className="hidden gap-8 text-sm font-medium text-zinc-600 dark:text-zinc-300 sm:flex">
+        <ul className="hidden items-center gap-8 text-sm font-medium text-zinc-600 dark:text-zinc-300 sm:flex">
           {links.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
-                className="transition-colors hover:text-zinc-950 dark:hover:text-white"
+                className="relative transition-colors after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-brand-500 after:transition-all hover:text-zinc-950 hover:after:w-full dark:hover:text-white"
               >
                 {link.label}
               </a>
             </li>
           ))}
+          <li>
+            <a
+              href={`mailto:${profile.email}`}
+              className="rounded-full bg-zinc-900 px-4 py-2 text-white transition-colors hover:bg-zinc-700 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200"
+            >
+              Hire me
+            </a>
+          </li>
         </ul>
 
         <button
@@ -63,6 +74,15 @@ export default function Navbar() {
               </a>
             </li>
           ))}
+          <li>
+            <a
+              href={`mailto:${profile.email}`}
+              onClick={() => setOpen(false)}
+              className="mt-1 block rounded-md bg-zinc-900 px-2 py-2 text-center text-sm font-medium text-white dark:bg-white dark:text-zinc-900"
+            >
+              Hire me
+            </a>
+          </li>
         </ul>
       )}
     </header>

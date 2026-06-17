@@ -3,8 +3,13 @@ import { profile } from "@/data/portfolio";
 export default function Footer() {
   return (
     <footer className="border-t border-zinc-200 dark:border-zinc-800">
-      <div className="mx-auto max-w-5xl px-6 py-8 text-sm text-zinc-500 dark:text-zinc-400">
-        © {new Date().getFullYear()} {profile.name}. All rights reserved.
+      <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-3 px-6 py-8 text-sm text-zinc-500 dark:text-zinc-400 sm:flex-row">
+        <span>
+          © {new Date().getFullYear()} {profile.name}. All rights reserved.
+        </span>
+        <span className="text-zinc-400 dark:text-zinc-500">
+          Built with Next.js & Tailwind CSS
+        </span>
       </div>
     </footer>
   );

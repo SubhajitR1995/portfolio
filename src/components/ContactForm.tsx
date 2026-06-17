@@ -42,7 +42,7 @@ export default function ContactForm() {
   }
 
   const inputClass =
-    "w-full rounded-lg border border-zinc-300 bg-transparent px-4 py-2.5 text-sm outline-none transition-colors focus:border-zinc-900 dark:border-zinc-700 dark:focus:border-white";
+    "w-full rounded-lg border border-zinc-300 bg-white/60 px-4 py-2.5 text-sm outline-none transition-colors focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 dark:border-zinc-700 dark:bg-zinc-900/60 dark:focus:border-brand-400";
 
   return (
     <form onSubmit={handleSubmit} className="mt-8 grid gap-4">
