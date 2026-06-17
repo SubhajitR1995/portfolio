@@ -3,7 +3,7 @@ import Section from "./Section";
 
 export default function Skills() {
   return (
-    <Section id="skills" eyebrow="04 — Toolkit" title="Skills & technologies">
+    <Section id="skills" eyebrow="05 — Toolkit" title="Skills & technologies">
       <div className="grid gap-6 sm:grid-cols-3">
         {skills.map((group) => (
           <div

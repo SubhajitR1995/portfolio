@@ -7,7 +7,7 @@ function thumbnail(url: string): string {
 
 export default function Projects() {
   return (
-    <Section id="projects" eyebrow="03 — Work" title="Selected projects">
+    <Section id="projects" eyebrow="04 — Work" title="Selected projects">
       <div className="grid gap-6 sm:grid-cols-2">
         {projects.map((project) => {
           const host = project.liveUrl

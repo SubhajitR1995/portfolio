@@ -6,9 +6,9 @@ import ThemeToggle from "./ThemeToggle";
 
 const links = [
   { href: "#about", label: "About" },
+  { href: "#services", label: "Services" },
   { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
-  { href: "#skills", label: "Skills" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -25,7 +25,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b border-zinc-200/60 bg-white/70 backdrop-blur-xl dark:border-white/5 dark:bg-[#08080a]/70">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="#top" className="flex items-center gap-2.5 text-base font-bold tracking-tight">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 text-xs text-white shadow-lg shadow-brand-500/20">
+          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-600 text-xs text-white">
             {initials}
           </span>
           {profile.name}

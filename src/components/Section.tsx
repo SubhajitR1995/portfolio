@@ -19,8 +19,8 @@ export default function Section({ id, eyebrow, title, children }: SectionProps) 
           <span className="font-mono text-xs font-medium uppercase tracking-[0.25em] text-brand-500 dark:text-brand-400">
             {eyebrow}
           </span>
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{title}</h2>
-          <span className="h-px w-16 bg-gradient-to-r from-brand-500 to-transparent" />
+          <h2 className="font-display text-3xl font-medium tracking-tight sm:text-4xl">{title}</h2>
+          <span className="h-px w-16 bg-zinc-300 dark:bg-white/15" />
         </div>
       </Reveal>
       <Reveal delay={80}>{children}</Reveal>

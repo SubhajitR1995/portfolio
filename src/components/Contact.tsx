@@ -4,7 +4,7 @@ import ContactForm from "./ContactForm";
 
 export default function Contact() {
   return (
-    <Section id="contact" eyebrow="05 — Contact" title="Let's work together">
+    <Section id="contact" eyebrow="06 — Contact" title="Let's work together">
       <div className="relative overflow-hidden rounded-3xl border border-zinc-200 bg-gradient-to-b from-zinc-50/80 to-white p-8 dark:border-white/10 dark:from-white/[0.04] dark:to-transparent sm:p-12">
         <div
           aria-hidden

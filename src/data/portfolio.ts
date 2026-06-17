@@ -52,6 +52,34 @@ export const experience: ExperienceItem[] = [
   },
 ];
 
+export type Service = {
+  title: string;
+  description: string;
+};
+
+export const services: Service[] = [
+  {
+    title: "WordPress Development",
+    description:
+      "End-to-end WordPress websites — from setup and configuration to launch, built for performance and easy maintenance.",
+  },
+  {
+    title: "Custom Themes & Plugins",
+    description:
+      "Bespoke themes and plugins tailored to your brand and requirements, with clean, standards-compliant code.",
+  },
+  {
+    title: "Responsive & Pixel-Perfect UI",
+    description:
+      "Designs translated into responsive, cross-browser layouts that look sharp on every device.",
+  },
+  {
+    title: "Performance & SEO",
+    description:
+      "Speed optimization, clean markup, and on-page SEO fundamentals to help your site rank and load fast.",
+  },
+];
+
 export type Project = {
   title: string;
   description: string;
