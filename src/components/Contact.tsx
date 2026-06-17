@@ -5,7 +5,7 @@ import ContactForm from "./ContactForm";
 export default function Contact() {
   return (
     <Section id="contact" eyebrow="06 — Contact" title="Let's work together">
-      <div className="relative overflow-hidden rounded-3xl border border-zinc-200 bg-gradient-to-b from-zinc-50/80 to-white p-8 dark:border-white/10 dark:from-white/[0.04] dark:to-transparent sm:p-12">
+      <div className="relative overflow-hidden rounded-3xl border border-zinc-200 bg-white p-8 shadow-sm dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none sm:p-12">
         <div
           aria-hidden
           className="pointer-events-none absolute -left-24 -top-24 h-64 w-64 rounded-full bg-brand-500/10 blur-3xl"
@@ -20,13 +20,13 @@ export default function Contact() {
           <div className="mt-5 flex flex-wrap gap-3 text-sm font-medium">
             <a
               href={`mailto:${profile.email}`}
-              className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-4 py-2 transition-colors hover:border-brand-300 hover:text-brand-600 dark:border-white/10 dark:bg-white/5 dark:hover:border-brand-500/50 dark:hover:text-brand-400"
+              className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-4 py-2 transition-colors hover:border-brand-300 hover:bg-white hover:text-brand-600 dark:border-white/10 dark:bg-white/5 dark:hover:border-brand-500/50 dark:hover:text-brand-400"
             >
               ✉ {profile.email}
             </a>
             <a
               href={`tel:${profile.phone.replace(/\s/g, "")}`}
-              className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-4 py-2 transition-colors hover:border-brand-300 hover:text-brand-600 dark:border-white/10 dark:bg-white/5 dark:hover:border-brand-500/50 dark:hover:text-brand-400"
+              className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-4 py-2 transition-colors hover:border-brand-300 hover:bg-white hover:text-brand-600 dark:border-white/10 dark:bg-white/5 dark:hover:border-brand-500/50 dark:hover:text-brand-400"
             >
               ☎ {profile.phone}
             </a>

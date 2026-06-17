@@ -4,7 +4,7 @@ import Section from "./Section";
 export default function Services() {
   return (
     <Section id="services" eyebrow="02 — Services" title="What I do">
-      <div className="grid gap-px overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-200 dark:border-white/10 dark:bg-white/10 sm:grid-cols-2">
+      <div className="grid gap-px overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-200 shadow-sm dark:border-white/10 dark:bg-white/10 dark:shadow-none sm:grid-cols-2">
         {services.map((service, i) => (
           <div
             key={service.title}

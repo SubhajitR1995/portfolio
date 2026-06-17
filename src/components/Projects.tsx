@@ -17,7 +17,7 @@ export default function Projects() {
           return (
             <article
               key={project.title}
-              className="group relative flex flex-col overflow-hidden rounded-2xl border border-zinc-200 bg-white transition-all hover:-translate-y-1 hover:border-brand-300 hover:shadow-2xl hover:shadow-brand-500/10 dark:border-white/10 dark:bg-white/[0.03] dark:hover:border-brand-500/40"
+              className="group relative flex flex-col overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm transition-all hover:-translate-y-1 hover:border-brand-300 hover:shadow-xl hover:shadow-brand-500/10 dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none dark:hover:border-brand-500/40"
             >
               {/* Live screenshot preview */}
               {project.liveUrl && (

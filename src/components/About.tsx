@@ -22,7 +22,7 @@ export default function About() {
         </div>
 
         <div className="sm:col-span-2">
-          <div className="rounded-3xl border border-zinc-200 bg-gradient-to-b from-zinc-50 to-white p-8 dark:border-white/10 dark:from-white/[0.04] dark:to-transparent">
+          <div className="rounded-3xl border border-zinc-200 bg-white p-8 shadow-sm dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none">
             <div className="flex items-center gap-2 text-sm font-medium text-zinc-500 dark:text-zinc-400">
               <span className="h-2 w-2 rounded-full bg-emerald-500" />
               Currently

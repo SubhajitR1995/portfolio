@@ -9,14 +9,19 @@ const initials = profile.name
 export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden">
-      {/* Subtle grid + a single soft glow */}
+      {/* Light: clean tinted gradient. Dark: subtle blurred glow. */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-grid text-zinc-400 dark:text-white [mask-image:radial-gradient(ellipse_at_top,black,transparent_65%)]"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-brand-50/60 via-white to-white dark:hidden"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-40 left-1/2 h-[30rem] w-[30rem] -translate-x-1/2 rounded-full bg-brand-500/10 blur-[130px]"
+        className="pointer-events-none absolute -top-40 left-1/2 hidden h-[30rem] w-[30rem] -translate-x-1/2 rounded-full bg-brand-500/10 blur-[130px] dark:block"
+      />
+      {/* Subtle dotted grid */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 bg-grid text-zinc-300 dark:text-white [mask-image:radial-gradient(ellipse_at_top,black,transparent_60%)]"
       />
 
       <div className="relative mx-auto flex max-w-5xl flex-col items-start gap-8 px-6 py-32 sm:py-40">
