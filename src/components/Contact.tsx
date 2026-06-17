@@ -51,14 +51,6 @@ export default function Contact() {
             >
               LinkedIn
             </a>
-            <a
-              href={profile.socials.twitter}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition-colors hover:text-brand-500"
-            >
-              Twitter
-            </a>
           </div>
         </div>
       </div>
